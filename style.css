@@ -1,0 +1,153 @@
+/* Основний стиль для сторінки */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Основний шрифт для тексту */
+    margin: 0; /* Прибирає стандартні відступи сторінки */
+    padding: 0; /* Прибирає стандартні поля сторінки */
+    background: linear-gradient(90deg, rgb(199, 208, 210), gray); /* Градієнт секції */
+    color: #333; /* Темно-сірий колір тексту */
+    scroll-behavior: smooth; /* Плавна прокрутка при переходах */
+}
+/* Стиль для додаткового фону для ДОМАШНІХ ЗАВДАНЬ */
+.body_homeworks {
+            background: linear-gradient(45deg, gray, rgb(154, 154, 154), lightblue); /* Градієнт під кутом 45°, з кількома кольорами */   
+}
+
+/* Стиль для заголовка */
+header {
+    background: linear-gradient(90deg, #323232, #242424); /* Градієнтний фон заголовка */
+    color: white; /* Білий колір тексту */
+    padding: 20px 0; /* Відступи зверху і знизу */
+    text-align: center; /* Центрування тексту */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь під заголовком */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Розмір шрифту для основного заголовка */
+    margin: 0; /* Відсутність зовнішніх відступів */
+}
+
+/* Навігаційна панель */
+nav {
+    display: flex; /* Розташування елементів у рядок */
+    justify-content: center; /* Центрування елементів навігації */
+    background: linear-gradient(90deg, rgb(199, 208, 210), gray); /* Градієнт секції */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь під панеллю навігації */
+    position: sticky; /* Фіксація панелі у верхній частині сторінки */
+    top: 0; /* Фіксація у верхній частині вікна */
+    z-index: 1000; /* Встановлення пріоритету для накладення */
+    padding: 10px 0; /* Відступи зверху і знизу */
+}
+
+nav a {
+    color: #ffffff; /* Темно-сірий колір тексту посилань */
+    padding: 10px 20px; /* Відступи всередині посилання */
+    text-decoration: none; /* Відсутність підкреслення тексту */
+    font-weight: bold; /* Жирний текст */
+    transition: all 0.3s ease; /* Плавний перехід при зміні стану */
+}
+
+nav a:hover {
+    color: white; /* Білий колір тексту при наведенні */
+    background-color: #323232; /* Темний фон при наведенні */
+    border-radius: 5px; /* Скруглення кутів */
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Переводимо елементи в колонку */
+        align-items: center; /* Центруємо елементи */
+        padding: 10px; /* Додаємо внутрішні відступи */
+    }
+
+    nav a {
+        padding: 10px; /* Зменшуємо відступи для економії місця */
+        width: 100%; /* Робимо посилання шириною у всю панель */
+        text-align: center; /* Текст вирівнюємо по центру */
+    }
+}
+/* Кнопки */
+button {
+    background-color: #00ff5e; /* Зелений фон кнопки */
+    color: rgb(255, 255, 255); /* Білий текст */
+    border: none; /* Відсутність рамки */
+    padding: 10px 20px; /* Внутрішні відступи */
+    font-size: 1rem; /* Розмір тексту кнопки */
+    font-weight: bold; /* Жирний текст */
+    border-radius: 5px; /* Скруглення кутів кнопки */
+    cursor: pointer; /* Курсор у вигляді руки при наведенні */
+    transition: all 0.3s ease; /* Плавний перехід для анімації */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопки */
+}
+
+button:hover {
+    background-color: #0056b3; /* Темно-синій фон при наведенні */
+    transform: scale(1.05); /* Легке збільшення кнопки */
+}
+
+button:active {
+    background-color: #003f7f; /* Темніший фон при натисканні */
+    transform: scale(0.95); /* Легке зменшення кнопки */
+}
+
+/* Контейнер для кнопки */
+.button-container {
+    display: flex; /* Вирівнювання елементів у контейнері */
+    justify-content: center; /* Центрування кнопки */
+    align-items: center; /* Вирівнювання по вертикалі */
+    height: auto; /* Автоматична висота контейнера */
+    background-color: #383838; /* Темно-сірий фон */
+    margin: 10px; /* Відсутність зовнішніх відступів */
+    display: inline-block; /* Вирівнювання як рядковий блок */
+}
+
+/* Контейнер сторінки */
+.container {
+    padding: 20px; /* Відступи всередині контейнера */
+    max-width: 1200px; /* Максимальна ширина контейнера */
+    margin: auto; /* Центрування контейнера */
+}
+
+/* Секції */
+.section {
+    margin-bottom: 20px; /* Відступ знизу секції */
+    background-color: white; /* Білий фон секції */
+    padding: 20px; /* Внутрішні відступи секції */
+    border-radius: 10px; /* Скруглення кутів */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь секції */
+    opacity: 0; /* Початкова прозорість для анімації */
+    transform: translateY(30px); /* Початкова позиція для анімації */
+    animation: fadeIn 0.8s ease forwards; /* Анімація появи секції */
+}
+
+/* Додатковий фон для секції */
+/* Секція з градієнтом */
+.section2 {
+    background: linear-gradient(90deg, rgb(199, 208, 210), gray); /* Градієнт секції */
+    padding: 20px; /* Відступи */
+    border-radius: 10px; /* Скруглені кути */
+    color: rgb(0, 0, 0); /* Білий текст */
+    animation: fadeIn 1s ease forwards; /* Плавна поява */
+}
+
+
+/* Стиль футера */
+footer {
+    text-align: center; /* Центрування тексту */
+    background-color: #333; /* Темний фон футера */
+    color: white; /* Білий колір тексту */
+    padding: 15px 0; /* Відступи зверху і знизу */
+    font-size: 0.9rem; /* Розмір тексту футера */
+}
+
+/* Анімація появи секції */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Початкова прозорість */
+        transform: translateY(30px); /* Початкова позиція */
+    }
+    to {
+        opacity: 1; /* Повна непрозорість */
+        transform: translateY(0); /* Кінцева позиція */
+    }
+}
